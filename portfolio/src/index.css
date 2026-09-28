@@ -1,0 +1,82 @@
+:root {
+  --ink: #0f1e27;
+  --ink-soft: #1b3542;
+  --paper: #eef2ef;
+  --paper-raised: #ffffff;
+  --blue: #2b4d74;
+  --blue-deep: #17263a;
+  --gold: #c9973f;
+  --gold-deep: #a97b2c;
+  --gold-soft: #f1e3c4;
+  --sage: #4f7d6c;
+  --slate: #55636b;
+  --slate-light: #8b98a0;
+  --line: #d9dfdb;
+  --line-dark: #2a3644;
+
+  --font-serif: "Fraunces", "Iowan Old Style", serif;
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --maxw: 1080px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  color: var(--slate);
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
